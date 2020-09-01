@@ -1,17 +1,37 @@
+// https://www.hackerrank.com/challenges/variable-sized-arrays/problem
 #include <cmath>
 #include <cstdio>
 #include <vector>
 #include <iostream>
 #include <algorithm>
+
 using namespace std;
 
+int main()
+{
 
-int main() {
+    int num, queries;
+    cin >> num >> queries;
+    vector<int> arr[num];
+
+    for (int i = 0; i < num; i++)
+    {
+        int k;
+        cin >> k;
+        int e;
+
+        for (int j = 0; j < k; j++)
+        {
+            cin>>e;
+            arr[i].push_back(e);
+        }
+    }
     
-    vector<int> vec;
-    for(int i=0;i<5;i++)
-    vec.push_back(i);
-    for(int i=0;i<vec.size();i++)
-    cout<<vec[i]<<"\n";
+    int r,s;
+    for (int i=0;i<queries;i++){
+        cin>>r>>s;
+        cout<<arr[r][s]<<endl;
+    }
+
     return 0;
 }
