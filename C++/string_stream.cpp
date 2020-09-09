@@ -10,7 +10,11 @@ vector<int> parseInts(string str) {
     vector<int> output;
     int temp;
     char ch;
-    while (sti>>temp){
+    while (sti>>temp)
+    // Provide proper checks here for temp like if empty
+    // Also strip down symbols like ! , . , ? , etc.
+    // Reads line till null character or space
+    {
         output.push_back(temp);
         sti>>ch;
     }
