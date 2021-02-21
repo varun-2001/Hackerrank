@@ -8,6 +8,7 @@
         "unordered_set": "cpp",
         "vector": "cpp",
         "forward_list": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "limits": "cpp"
     }
 }
