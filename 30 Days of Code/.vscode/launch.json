@@ -4,15 +4,20 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
-            "name":"Python: Current File",
-            "type":"python",
-            "request":"launch",
-            "program":"${file}",
-            "console":"integratedTerminal"
+            "type": "java",
+            "name": "Launch TwoDArrays",
+            "request": "launch",
+            "mainClass": "TwoDArrays",
+            "projectName": "30 Days of Code_d9e7b022"
         },
-
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
         {
             "name": "(Windows) Launch",
             "type": "cppvsdbg",
