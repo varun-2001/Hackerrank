@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AbstractClasses",
+            "request": "launch",
+            "mainClass": "AbstractClasses",
+            "projectName": "30 Days of Code_d9e7b022"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inheritance",
+            "request": "launch",
+            "mainClass": "Inheritance",
+            "projectName": "30 Days of Code_d9e7b022"
+        },
+        {
+            "type": "java",
             "name": "Launch TwoDArrays",
             "request": "launch",
             "mainClass": "TwoDArrays",
