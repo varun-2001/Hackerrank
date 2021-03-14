@@ -1,0 +1,27 @@
+//  https://www.hackerrank.com/challenges/30-interfaces/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+class AdvancedArithmetic{
+    public:
+        virtual int divisorSum(int n)=0;
+};
+class Calculator : public AdvancedArithmetic {
+public:
+    int divisorSum(int n) {
+        return 0;
+    }
+};
+
+int main(){
+    int n;
+    cin >> n;
+    AdvancedArithmetic *myCalculator = new Calculator(); 
+    int sum = myCalculator->divisorSum(n);
+    cout << "I implemented: AdvancedArithmetic\n" << sum;
+    return 0;
+}

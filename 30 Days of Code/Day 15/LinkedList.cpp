@@ -13,18 +13,17 @@ class Node
 };
 class Solution{
     public:
-
       Node* insert(Node *head,int data)
       {
         if (head==NULL)
-            Node head= Node(data);
+            head= new Node(data);
         else{
             Node *curr = head;
             while (curr->next)
                 curr=curr->next;    
+            curr->next=new Node(data);
         }
-          Node *start = head;
-          
+        return head;
           //Complete this method
       }
 
@@ -49,5 +48,6 @@ int main()
         head=mylist.insert(head,data);
     }	
 	mylist.display(head);
+    return 0;
 		
 }
