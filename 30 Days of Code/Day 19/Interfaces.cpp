@@ -12,7 +12,7 @@ class AdvancedArithmetic{
 };
 class Calculator : public AdvancedArithmetic {
 public:
-    int divisorSum(int n) {
+    int divisorSum(int n) {	
         return 0;
     }
 };
