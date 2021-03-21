@@ -26,8 +26,10 @@ int main()
 
         if (regex_match(emailID, regex(".+@gmail.com"))){
             names.push_back(firstName);
-        }  names.sort();
-        for (int i:names){
+        }  
+        names.sort();
+        for (auto i=names.begin();i!=names.end();++i){
+            cout<<*i<<"\n";
         }
 
     return 0;
