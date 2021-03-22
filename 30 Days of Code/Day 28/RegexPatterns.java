@@ -10,7 +10,6 @@ public class Solution {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        list<String> names=new list();
         String regexPattern=".+@gmail\\.com$";
         Pattern pattern = Pattern.compile(regexPattern);
         int N = scanner.nextInt();
@@ -27,9 +26,7 @@ public class Solution {
             if (matcher.find()) names.add(firstName);
         }
         Collections.sort(names);
-        list.forEach(System.out::println);
-
-
+        names.forEach(System.out::println);
         scanner.close();
     }
 }
