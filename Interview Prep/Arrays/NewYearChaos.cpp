@@ -12,15 +12,31 @@ vector<string> split(const string &);
  * The function accepts INTEGER_ARRAY q as parameter.
  */
 // 1 2 3 4 5
+
 void minimumBribes(vector<int> q) {
-    for (int i=0;i<q.size();i++){
-        if ((i+1)!=q[i]){
-            if((q[i]-i+1)==1) cout<<"1";
-            else cout<<"Too chaotic";
+    int bribe =0;
+    for (int i=q.size()-1;i>=0;i--){
+        if (q[i]!=i+1){
+            if (i-1>=0 && q[i-1]==i+1){
+                bribe++;
+                q[i-1]=q[i];
+                q[i]=i+1;
+            }
+            else if (i-2>=0 && q[i-2]==i+1){
+                bribe+=2;
+                q[i-2]=q[i-1];
+                q[i-1]=q[i];
+                q[i]=i+1;
+            }
+            else {
+                cout<<"Too chaotic\n";
+                return;
+            }
         }
-            break;
     }
+    cout<<bribe;
 }
+
 
 int main()
 {
@@ -52,43 +68,4 @@ int main()
     }
 
     return 0;
-}
-
-string ltrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
-
-    return s;
-}
-
-string rtrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
-
-    return s;
-}
-
-vector<string> split(const string &str) {
-    vector<string> tokens;
-
-    string::size_type start = 0;
-    string::size_type end = 0;
-
-    while ((end = str.find(" ", start)) != string::npos) {
-        tokens.push_back(str.substr(start, end - start));
-
-        start = end + 1;
-    }
-
-    tokens.push_back(str.substr(start));
-
-    return tokens;
 }
